@@ -10,7 +10,6 @@
     <header class="nav">
       <a class="logo" href="#">ELLA_COSMOS</a>
 
-
       <nav class="menu" aria-label="Navigation">
         <a href="#dates">Dates</a>
         <a href="#music">Musique</a>
@@ -19,58 +18,65 @@
       </nav>
     </header>
 
-<main class="hero hero--editorial">
-  <div class="hero__frame">
-    <img class="hero__photo" src="/band.jpg" alt="Photo du groupe ELLA COSMOS" />
-  </div>
+    <main class="hero hero--editorial">
+      <!-- reveal image -->
+      <div class="hero__frame reveal">
+<img
+  class="hero__photo reveal-photo"
+  src="/band.jpg"
+  alt="Photo du groupe ELLA COSMOS"
+/>
 
-  <section class="hero__text">
-    <p class="kicker">Electro — Pop / Neuchâtel</p>
-    <h1 class="title">ELLA_COSMOS</h1>
-    <p class="lead">Une dark pop cosmique, élégante et solaire.</p>
+      </div>
 
-    <div class="cta">
-      <a class="btn" href="#music">Écouter</a>
-      <a class="btn btn--link" href="#dates">Dates</a>
-    </div>
+      <!-- reveal text -->
+      <section class="hero__text reveal">
+        <p class="kicker">Electro — Pop / Neuchâtel</p>
+        <h1 class="title">ELLA_COSMOS</h1>
+        <p class="lead">Une dark pop cosmique, élégante et solaire.</p>
 
-    <div class="meta">
-      <span>EP 2026</span><span class="dot">•</span><span>Booking: booking@ellacosmos.com</span>
-    </div>
-  </section>
-</main>
+        <div class="cta">
+          <a class="btn" href="#music">Écouter</a>
+          <a class="btn btn--link" href="#dates">Dates</a>
+        </div>
 
-
+        <div class="meta">
+          <span>EP 2026</span>
+          <span class="dot">•</span>
+          <span>Booking: booking@ellacosmos.com</span>
+        </div>
+      </section>
+    </main>
 
     <section class="section" id="dates">
-      <div class="container">
+      <div class="container reveal">
         <h2>Dates</h2>
         <p>(On mettra une liste propre ici.)</p>
       </div>
     </section>
 
     <section class="section" id="music">
-      <div class="container">
+      <div class="container reveal">
         <h2>Musique</h2>
         <p>(Embed Spotify / SoundCloud ici.)</p>
       </div>
     </section>
 
     <section class="section" id="videos">
-      <div class="container">
+      <div class="container reveal">
         <h2>Vidéos</h2>
         <p>(Embed YouTube ici.)</p>
       </div>
     </section>
 
     <section class="section" id="contact">
-      <div class="container">
+      <div class="container reveal">
         <h2>Contact</h2>
         <p>booking@ellacosmos.com</p>
       </div>
     </section>
 
-    <!-- ✅ IMPORTANT: charge Vite + ton JS (et donc le CSS importé) -->
+    <!-- Vite entry -->
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
