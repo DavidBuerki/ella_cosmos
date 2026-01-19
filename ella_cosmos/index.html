@@ -20,14 +20,54 @@
 
     <main class="hero hero--editorial">
       <!-- reveal image -->
-      <div class="hero__frame reveal">
-<img
-  class="hero__photo reveal-photo"
+<div class="hero__frame reveal">
+
+  <img
+  class="hero__photo hero__photo--base"
   src="/band.jpg"
-  alt="Photo du groupe ELLA COSMOS"
+  alt=""
 />
 
-      </div>
+  <svg
+    class="hero__mask"
+    viewBox="0 0 1200 600"
+    preserveAspectRatio="xMidYMid slice"
+  >
+    <defs>
+      <mask id="text-mask">
+        <!-- Fond noir = caché -->
+        <rect width="100%" height="100%" fill="black" />
+        <!-- Texte blanc = visible -->
+<text
+ class="hero__mask-text"
+  x="50%"
+  y="55%"
+  text-anchor="middle"
+  font-family="Inter, sans-serif"
+  font-weight="1000
+"
+  font-size="200"
+  letter-spacing="0.10em"
+  fill="white"
+>
+  <tspan x="50%" dy="0">ELLA</tspan>
+  <tspan x="50%" dy="1.1em">COSMOS</tspan>
+</text>
+
+      </mask>
+    </defs>
+
+    <!-- Image masquée par le texte -->
+    <image
+      href="/band.jpg"
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid slice"
+      mask="url(#text-mask)"
+    />
+  </svg>
+</div>
+
 
       <!-- reveal text -->
       <section class="hero__text reveal">
