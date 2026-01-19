@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ella_cosmos</title>
-    <script type="module" crossorigin src="./assets/index-c-avu8Ky.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Bj8eEaLi.css">
+    <script type="module" crossorigin src="./assets/index-Br5lVtyy.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BC8kzYEb.css">
   </head>
 
   <body>
@@ -22,14 +22,54 @@
 
     <main class="hero hero--editorial">
       <!-- reveal image -->
-      <div class="hero__frame reveal">
-<img
-  class="hero__photo reveal-photo"
+<div class="hero__frame reveal">
+
+  <img
+  class="hero__photo hero__photo--base"
   src="./band.jpg"
-  alt="Photo du groupe ELLA COSMOS"
+  alt=""
 />
 
-      </div>
+  <svg
+    class="hero__mask"
+    viewBox="0 0 1200 600"
+    preserveAspectRatio="xMidYMid slice"
+  >
+    <defs>
+      <mask id="text-mask">
+        <!-- Fond noir = caché -->
+        <rect width="100%" height="100%" fill="black" />
+        <!-- Texte blanc = visible -->
+<text
+ class="hero__mask-text"
+  x="50%"
+  y="55%"
+  text-anchor="middle"
+  font-family="Inter, sans-serif"
+  font-weight="1000
+"
+  font-size="200"
+  letter-spacing="0.10em"
+  fill="white"
+>
+  <tspan x="50%" dy="0">ELLA</tspan>
+  <tspan x="50%" dy="1.1em">COSMOS</tspan>
+</text>
+
+      </mask>
+    </defs>
+
+    <!-- Image masquée par le texte -->
+    <image
+      href="./band.jpg"
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid slice"
+      mask="url(#text-mask)"
+    />
+  </svg>
+</div>
+
 
       <!-- reveal text -->
       <section class="hero__text reveal">
@@ -37,20 +77,56 @@
         <h1 class="title">ELLA_COSMOS</h1>
         <p class="lead">Une dark pop cosmique, élégante et solaire.</p>
 
-        <div class="cta">
-          <a class="btn" href="#music">Écouter</a>
-          <a class="btn btn--link" href="#dates">Dates</a>
-        </div>
+<!--
+<div class="cta">
+  <a class="btn" href="#music">Écouter</a>
+  <a class="btn btn--link" href="#dates">Dates</a>
+</div>
+-->
 
-        <div class="meta">
-          <span>EP 2026</span>
-          <span class="dot">•</span>
-          <span>Booking: booking@ellacosmos.com</span>
-        </div>
+<div class="social">
+  <!-- Facebook -->
+  <a href="#" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+      <circle cx="12" cy="12" r="12" fill="#000"/>
+      <path d="M13.5 8.5h2V6h-2c-2 0-3.5 1.5-3.5 3.5V11H8v2.5h2V19h2.5v-5.5h2l.5-2.5h-2.5V9.5c0-.6.4-1 1-1z" fill="#fff"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="#" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+      <circle cx="12" cy="12" r="12" fill="#000"/>
+      <rect x="7" y="7" width="10" height="10" rx="3" stroke="#fff" fill="none" stroke-width="1.5"/>
+      <circle cx="12" cy="12" r="2.5" stroke="#fff" fill="none" stroke-width="1.5"/>
+      <circle cx="15.5" cy="8.5" r="0.8" fill="#fff"/>
+    </svg>
+  </a>
+
+  <!-- YouTube -->
+  <a href="#" aria-label="YouTube">
+    <svg viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+      <circle cx="12" cy="12" r="12" fill="#000"/>
+      <polygon points="10,8 16,12 10,16" fill="#fff"/>
+    </svg>
+  </a>
+
+  <!-- Spotify -->
+  <a href="#" aria-label="Spotify">
+    <svg viewBox="0 0 24 24" width="36" height="36" aria-hidden="true">
+      <circle cx="12" cy="12" r="12" fill="#000"/>
+      <path d="M7 10c3-1 7-.5 10 1" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M7.5 12.5c2.5-.7 6-.4 8.5.8" stroke="#fff" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+      <path d="M8 15c2-.4 4.5-.2 6.5.6" stroke="#fff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    </svg>
+  </a>
+</div>
+
+
       </section>
     </main>
 
-    <section class="section" id="dates">
+    <!--<section class="section" id="dates">
       <div class="container reveal">
         <h2>Dates</h2>
         <p>(On mettra une liste propre ici.)</p>
@@ -70,6 +146,7 @@
         <p>(Embed YouTube ici.)</p>
       </div>
     </section>
+    -->
 
     <section class="section" id="contact">
       <div class="container reveal">
