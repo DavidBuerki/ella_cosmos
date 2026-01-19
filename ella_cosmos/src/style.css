@@ -9,10 +9,9 @@
   --line: rgba(20,20,20,.14);
 
   /* Accent vert subtil */
-  --accent: #6f8f7a;       /* vert sauge */
+  --accent: #6f8f7a;
   --accent-soft: #a8c1b2;
   --accent-rose: #b58a94;
-
 
   /* Layout */
   --pad: clamp(16px, 3vw, 28px);
@@ -86,24 +85,30 @@ a{
 }
 
 /* ───────── HERO (editorial) ───────── */
+
+/* HERO : image full width, texte dessous */
 .hero--editorial{
-  width:min(var(--max), calc(100% - 2*var(--pad)));
-  margin: 0 auto;
+  display: block;
+  width: 100%;
   padding: clamp(18px, 4vw, 38px) 0 28px;
-  display:grid;
-  gap: clamp(16px, 3vw, 28px);
-  grid-template-columns: 1.4fr 1fr;
-  align-items: end;
 }
 
+/* Image pleine largeur écran */
 .hero__frame{
-  border-radius: var(--r);
-  overflow:hidden;
-  border: 1px solid var(--line);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
   background: #e9e3da;
   aspect-ratio: 16 / 9;
 }
 
+/* Image */
 .hero__photo{
   width:100%;
   height:100%;
@@ -113,7 +118,10 @@ a{
   filter: contrast(1.03) saturate(1.02);
 }
 
+/* Texte sous l’image, largeur éditoriale */
 .hero__text{
+  width: min(var(--max), calc(100% - 2*var(--pad)));
+  margin: 24px auto 0;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--line);
 }
@@ -137,7 +145,6 @@ a{
   text-transform: uppercase;
   color: var(--fg);
 }
-
 
 .title::after{
   content:"";
@@ -199,7 +206,7 @@ a{
 
 .dot{ opacity:.5; }
 
-/* Social links (pas utilisés dans ton HTML actuel, mais ok à garder) */
+/* Social */
 .social{
   display:flex;
   gap: 14px;
@@ -235,20 +242,19 @@ a{
   color: var(--fg);
 }
 
-/* ───────── Reveal animations (AJOUT) ───────── */
+/* ───────── Reveal animations ───────── */
 .reveal{
   opacity: 0;
   transform: translateY(24px);
   transition: opacity .9s ease, transform .9s ease;
 }
 
-
 .reveal.is-in{
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Hero image un peu plus “ciné” */
+/* Hero image plus “ciné” */
 .hero__frame.reveal{
   transform: translateY(18px) scale(.985);
 }
@@ -257,7 +263,7 @@ a{
   transform: translateY(0) scale(1);
 }
 
-/* Accessibilité : réduire les animations si l’utilisateur le demande */
+/* Accessibilité */
 @media (prefers-reduced-motion: reduce){
   .reveal{
     opacity: 1 !important;
@@ -268,12 +274,6 @@ a{
 
 /* ───────── Responsive ───────── */
 @media (max-width: 900px){
-  .hero--editorial{
-    grid-template-columns: 1fr;
-    align-items: start;
-    padding-top: 18px;
-  }
-
   .hero__frame{
     aspect-ratio: 4 / 5;
   }
@@ -282,4 +282,3 @@ a{
     object-position: center 50%;
   }
 }
-
